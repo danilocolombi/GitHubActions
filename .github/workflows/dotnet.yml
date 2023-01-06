@@ -17,8 +17,8 @@ jobs:
 
     steps:
     
-    - name: Escrever Nome do Repositório
-      run: echo ${{ github.repository	}}
+    - name: Exibir Nome do Repositório
+      run: echo $GITHUB_REPOSITORY
     
     - name: Listar Versões do .NET SDK
       run: dotnet --list-sdks
