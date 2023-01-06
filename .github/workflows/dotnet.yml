@@ -18,7 +18,7 @@ jobs:
     steps:
     
     - name: Listar Versões do .NET SDK
-    - run: dotnet --list-sdks
+      run: dotnet --list-sdks
     
     - uses: actions/checkout@v3
     - name: Setup .NET
