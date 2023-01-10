@@ -20,6 +20,12 @@ jobs:
     - name: Exibir Nome do Repositório
       run: echo $GITHUB_REPOSITORY
     
+    - name: Teste com PowerShell
+      shell: pwsh
+      run: |
+        ls
+        history
+        
     - name: Listar Versões do .NET SDK
       run: dotnet --list-sdks
       
@@ -34,9 +40,10 @@ jobs:
         dotnet-version: 6.0.404
         
     - name: Restaurar Dependencias
-      run: dotnet restore
       #using power shell instead of bash
       shell: pwsh
+      run: dotnet restore
+
       
     - name: Compilar
       run: dotnet build --no-restore
