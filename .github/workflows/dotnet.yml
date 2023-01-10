@@ -23,8 +23,7 @@ jobs:
     - name: Teste com PowerShell
       shell: pwsh
       run: |
-        ls
-        history
+        Write-Host "Usando PowerShell"
         
     - name: Listar Versões do .NET SDK
       run: dotnet --list-sdks
