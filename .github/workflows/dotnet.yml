@@ -35,6 +35,8 @@ jobs:
         
     - name: Restaurar Dependencias
       run: dotnet restore
+      #using power shell instead of bash
+      shell: pwsh
       
     - name: Compilar
       run: dotnet build --no-restore
