@@ -28,6 +28,13 @@ jobs:
     - name: Listar Versões do .NET SDK
       run: dotnet --list-sdks
       
+    - name: Simular Step com Falha
+      run: exit 1
+      
+    - name: Enviar Notificação de falha
+      if: failure()
+      run: echo Notificando Falha de Workflow
+      
     - name: Exibir Secret
       run: echo O valor é ${{ secrets.MY_SECRET_SECRETO }}. O secret não é exibido no log por questões de segurança 
     
