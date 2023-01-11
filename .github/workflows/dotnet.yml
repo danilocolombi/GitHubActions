@@ -68,6 +68,8 @@ jobs:
       NOME_COMPLETO_IMAGEM: ${{ secrets.DOCKER_USERNAME }}/$NOME_IMAGEM
       
     steps:
+    
+     - uses: actions/checkout@v2
        
      - name: Docker Login
        uses: docker/login-action@v2.1.0
