@@ -82,4 +82,4 @@ jobs:
        with:
           context: .
           push: true
-          tags: danilocolombi/githubactions:latest, danilocolombi/githubactions:$GITHUB_RUN_NUMBER
+          tags: $NOME_COMPLETO_IMAGEM:latest
