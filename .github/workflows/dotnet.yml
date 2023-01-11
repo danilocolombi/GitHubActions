@@ -68,9 +68,6 @@ jobs:
       NOME_COMPLETO_IMAGEM: ${{ secrets.DOCKER_USERNAME }}/$NOME_IMAGEM
       
     steps:
-    
-     - name: Exibir Nome do Repositório
-       run: echo ${{env.NOME_COMPLETO_IMAGEM}}:$GITHUB_RUN_NUMBER
        
      - name: Docker Login
        uses: docker/login-action@v2.1.0
@@ -84,5 +81,5 @@ jobs:
         context: .
         push: true
         tags: |
-          ${{env.NOME_COMPLETO_IMAGEM}}:$GITHUB_RUN_NUMBER
-          ${{env.NOME_COMPLETO_IMAGEM}}:latest
+          $NOME_COMPLETO_IMAGEM:latest
+          $NOME_COMPLETO_IMAGEM:$GITHUB_RUN_NUMBER
