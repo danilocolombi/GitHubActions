@@ -64,6 +64,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
+    
+     - name: Exibir Nome do Repositório
+       run: echo ${{env.NOME_COMPLETO_IMAGEM}}:$GITHUB_RUN_NUMBER
+       
      - name: Docker Login
        uses: docker/login-action@v2.1.0
        with:
@@ -75,4 +79,4 @@ jobs:
        with:
         context: .
         push: true
-        tags: ${{env.NOME_COMPLETO_IMAGEM}}:latest
+        tags: ${{env.NOME_COMPLETO_IMAGEM}}:$GITHUB_RUN_NUMBER
