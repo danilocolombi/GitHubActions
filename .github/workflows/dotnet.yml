@@ -79,7 +79,7 @@ jobs:
           
      - name: Build e Push no Docker Hub
        run: |
-        cd ./GithubActions
+        ls
         docker build . --file Dockerfile --tag $NOME_COMPLETO_IMAGEM:latest
         docker tag $NOME_COMPLETO_IMAGEM:latest   $NOME_COMPLETO_IMAGEM:$GITHUB_RUN_NUMBER
         docker push  $NOME_COMPLETO_IMAGEM
