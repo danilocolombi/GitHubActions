@@ -72,6 +72,7 @@ jobs:
         
      - name: Build e Push no Docker Hub
        run: |
+        ls
         cd ./GithubActions
         docker build . --file Dockerfile --tag ${{ env.NOME_COMPLETO_IMAGEM }}:latest
         docker tag ${{ env.NOME_COMPLETO_IMAGEM }}:latest ${{ env.NOME_COMPLETO_IMAGEM }}:$GITHUB_RUN_NUMBER
