@@ -81,6 +81,6 @@ jobs:
      - name: Build and push
        uses: docker/build-push-action@v3
        with:
-          context: ./GitHubActions
+          context: .
           push: true
           tags: danilocolombi/githubactions:latest
