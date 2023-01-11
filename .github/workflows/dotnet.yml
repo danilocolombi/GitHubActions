@@ -82,4 +82,4 @@ jobs:
        with:
           context: .
           push: true
-          tags: $NOME_COMPLETO_IMAGEM:latest
+          tags: $ {{ env.NOME_COMPLETO_IMAGEM }}:latest
