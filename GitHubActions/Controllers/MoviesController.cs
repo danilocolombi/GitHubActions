@@ -33,7 +33,7 @@ namespace GitHubActions.Controllers
 
             Movies.Remove(movie);
 
-            return NoContent();
+            return Ok();
         }
 
         [HttpPost]

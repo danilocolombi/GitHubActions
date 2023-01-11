@@ -33,7 +33,7 @@ namespace GitHubActions.Controllers
 
             Series.Remove(series);
 
-            return NoContent();
+            return Ok();
         }
 
         [HttpPost]

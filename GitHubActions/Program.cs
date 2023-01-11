@@ -21,6 +21,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.UseCors("Total");
 
 app.UseSwagger();
 app.UseSwaggerUI(c =>
