@@ -62,10 +62,6 @@ jobs:
     runs-on: ubuntu-latest
     
     needs: [build]
-    
-    env:
-      NOME_IMAGEM: githubactions
-      NOME_COMPLETO_IMAGEM: ${{ secrets.DOCKER_USERNAME }}/$NOME_IMAGEM
       
     steps:
     
@@ -82,4 +78,4 @@ jobs:
        with:
           context: .
           push: true
-          tags: $ {{ NOME_COMPLETO_IMAGEM }}:latest
+          tags: ${{secrets.DOCKER_USERNAME}}/githubactions:latest
