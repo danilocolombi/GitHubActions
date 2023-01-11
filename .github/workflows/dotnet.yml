@@ -75,4 +75,5 @@ jobs:
        with:
         context: .
         push: true
-        tags: ${{ env.NOME_COMPLETO_IMAGEM }}:latest
+        tags: |
+          danilocolombi/githubactions:latest
