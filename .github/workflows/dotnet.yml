@@ -20,6 +20,11 @@ jobs:
     - name: Exibir Nome do Repositório
       run: echo $GITHUB_REPOSITORY
     
+    - name: Teste com PowerShell
+      shell: pwsh
+      run: |
+        Write-Host "Usando PowerShell"
+        
     - name: Listar Versões do .NET SDK
       run: dotnet --list-sdks
       
@@ -34,6 +39,8 @@ jobs:
         dotnet-version: 6.0.404
         
     - name: Restaurar Dependencias
+      #using power shell instead of bash
+      shell: pwsh
       run: dotnet restore
       
     - name: Compilar
@@ -41,3 +48,10 @@ jobs:
       
     - name: Testar
       run: dotnet test --no-build --verbosity normal
+      
+    # - name: Simular Step com Falha
+    #   run: exit 1
+      
+    - name: Enviar Notificação de falha
+      if: failure()
+      run: echo Notificando Falha de Workflow      
