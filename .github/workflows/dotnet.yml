@@ -77,9 +77,12 @@ jobs:
         username: ${{secrets.DOCKER_USERNAME}}
         password: ${{secrets.DOCKER_PASSWORD}} 
         
+     - name: Mudar de diretorio
+     - run: cd GitHubActions
+        
      - name: Build and push
        uses: docker/build-push-action@v3
        with:
-          context: ./GitHubActions
+          context: .
           push: true
           tags: danilocolombi/githubactions:latest
