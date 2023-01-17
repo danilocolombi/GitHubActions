@@ -85,10 +85,7 @@ jobs:
     runs-on: ubuntu-latest
     
     needs: [push]    
-        
-    env:
-     NOME_WEB_APP: my-movies-and-series
-    
+
     steps:
       
       - name: Azure Login
@@ -99,5 +96,5 @@ jobs:
       - name: Azure WebApp
         uses: Azure/webapps-deploy@v2.2.5
         with:
-          app-name: ${{ env.NOME_WEB_APP }}
+          app-name: my-movies-and-series
           images: ${{secrets.DOCKER_USERNAME}}/githubactions:latest 
