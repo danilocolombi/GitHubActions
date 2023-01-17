@@ -99,5 +99,5 @@ jobs:
       - name: Azure WebApp
         uses: Azure/webapps-deploy@v2.2.5
         with:
-          app-name: ${{ env.WEB_APP_NAME }}
+          app-name: ${{ env.NOME_WEB_APP }}
           images: ${{secrets.DOCKER_USERNAME}}/githubactions:latest 
