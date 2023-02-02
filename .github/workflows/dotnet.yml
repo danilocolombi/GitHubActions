@@ -10,10 +10,16 @@ on:
 jobs:
 
   build:
+  
+    env:
+      MY_CUSTOM_MESSAGE: This is my first env variable
 
     runs-on: ubuntu-latest
 
     steps:
+    
+    - name: Exibir uma variável de ambiente
+      run: echo ${{ ENV.MY_CUSTOM_MESSAGE }}
     
     - name: Exibir Nome do Repositório
       run: echo $GITHUB_REPOSITORY
