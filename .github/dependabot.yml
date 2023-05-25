@@ -3,5 +3,4 @@ updates:
   - package-ecosystem: "nuget" # See documentation for possible values
     directory: "/GitHubActions/GitHubActions.csproj" # Location of package manifests
     schedule:
-      interval: "daily"
-      time: "11:35"
+      - cron: "*/5 * * * *"
