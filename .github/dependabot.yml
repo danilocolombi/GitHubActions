@@ -4,4 +4,4 @@ updates:
     directory: "/GitHubActions/GitHubActions.csproj" # Location of package manifests
     schedule:
       interval: "daily"
-      time: "11:32"
+      time: "11:35"
