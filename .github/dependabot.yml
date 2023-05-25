@@ -1,6 +1,11 @@
 version: 2
 updates:
-  - package-ecosystem: "nuget" # See documentation for possible values
-    directory: "/GitHubActions/GitHubActions.csproj" # Location of package manifests
+  - package-ecosystem: "nuget"
+    directory: "/GitHubActions/GitHubActions.csproj"
     schedule:
-      - cron: "*/5 * * * *"
+      interval: "daily"
+      
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "daily"
