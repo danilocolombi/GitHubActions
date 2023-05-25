@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "nuget"
-    directory: "/GitHubActions/GitHubActions.csproj"
+    directory: "GitHubActions/GitHubActions.csproj"
     schedule:
       interval: "daily"
       
